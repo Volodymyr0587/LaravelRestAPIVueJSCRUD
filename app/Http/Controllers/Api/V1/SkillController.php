@@ -13,7 +13,7 @@ class SkillController extends Controller
 {
     public function index()
     {
-        return new SkillCollection(Skill::paginate(1));
+        return new SkillCollection(Skill::all());
     }
 
     public function show(Skill $skill)

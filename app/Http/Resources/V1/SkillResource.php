@@ -16,8 +16,8 @@ class SkillResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'slillName' => $this->name,
-            'url' => $this->slug // 'url' => route('skills.show', $this->slug)  // This will return full url to skill
+            'name' => $this->name,
+            'slug' => $this->slug // 'url' => route('skills.show', $this->slug)  // This will return full url to skill
         ];
     }
 }
