@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSkillRequest;
+use App\Http\Resources\V1\SkillCollection;
 use App\Http\Resources\V1\SkillResource;
 use App\Models\Skill;
 
@@ -12,7 +13,7 @@ class SkillController extends Controller
 {
     public function index()
     {
-        return SkillResource::collection(Skill::paginate(1));
+        return new SkillCollection(Skill::paginate(1));
     }
 
     public function show(Skill $skill)
